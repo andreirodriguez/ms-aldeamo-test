@@ -65,6 +65,15 @@ public class ConvertFormat
 		return json;
 	}
 	
+	public static String ObjectToJson(Object o)
+	{
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+		String json = gson.toJson(o); 		
+		
+		return json;
+	}	
+	
 	public static <T> Predicate<T> distinctByKey(Function<? super T, ?> keyExtractor) 
 	{		  
 	    Map<Object, Boolean> seen = new ConcurrentHashMap<>();

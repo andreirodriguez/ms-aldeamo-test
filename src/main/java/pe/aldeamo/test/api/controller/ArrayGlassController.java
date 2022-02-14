@@ -29,6 +29,6 @@ public class ArrayGlassController {
 		
 		if(i==null) return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);	
 
-		return new ResponseEntity<ArrayGlassResponse>(new ArrayGlassResponse(),HttpStatus.OK);
+		return new ResponseEntity<ArrayGlassResponse>(ArrayGlassMapper.ToArrayGlassResponse(i),HttpStatus.OK);
 	}
 }
